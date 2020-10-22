@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import MyFirstComponent from './components/learning-examples/MyFirstComponent';
+import SecondComponent from './components/learning-examples/SecondComponent';
 import logo from './logo.svg';
 import './App.css';
 
@@ -7,28 +9,12 @@ render() {
     return (
         <div className="App">
             My Hello World Bye
-            <FirstComponent></FirstComponent>
-            <secodComponent></secodComponent>
+            <MyFirstComponent></MyFirstComponent>
+            <SecondComponent></SecondComponent>
         </div>
     );
 }
 }
-class FirstComponent extends Component{
-    render() {
-        return(
-            <div className="firstComponent">
-                First Component
-            </div>
 
-        )
-    }
-}
-function secodComponent() {
-    return(
-        <div className="secodComponent">
-            From Function Component
-        </div>
-    )
 
-}
 export default App;
