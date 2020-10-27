@@ -4,46 +4,14 @@ import {render} from "react-dom";
 
 
 class CounterButton extends Component{
-    state;
-
-//Define the initial state in constructor
-    //state=>counter 0
-    constructor() {
-        super();
-
-        this.state= {
-            counter: 0
-        }
-    }
-
-
     render = ()=> {
         return (
             <div className="counter">
-                <button onClick={this.increment}>+{this.props.by}</button>  <button onClick={this.decrement}>-{this.props.by}</button>
+                <button onClick={()=> this.props.incrementMethod(this.props.by)}>+{this.props.by}</button>  <button onClick={()=>this.props.decrementMethod(this.props.by)}>-{this.props.by}</button>
 
             </div>
         )
     }
-
-    increment=()=> {
-        console.log('increment')
-        this.props.incrementMethod(this.props.by)
-        this.setState(
-            {counter: this.state.counter + this.props.by}
-        );
-
-    }
-
-    decrement=()=> {
-        console.log('increment')
-        this.props.decrementMethod(this.props.by)
-        this.setState(
-            {counter: this.state.counter - this.props.by}
-        );
-
-    }
-
 }
 
 export class Counter extends Component {
