@@ -28,11 +28,14 @@ export class Counter extends Component {
     render=()=> {
         return (
         <div className="counter">
-            <CounterButton by={1} incrementMethod={this.increment} decrementMethod={this.decrement}/>
-            <CounterButton by={5} incrementMethod={this.increment} decrementMethod={this.decrement}/>
-            <CounterButton by={10} incrementMethod={this.increment} decrementMethod={this.decrement}/>
-            <span className="count">{this.state.counter}</span>
-            <div><button className="reset" onClick={this.clear}>Reset</button></div>
+            <div className="container">
+                <CounterButton by={1} incrementMethod={this.increment} decrementMethod={this.decrement}/>
+                <CounterButton by={5} incrementMethod={this.increment} decrementMethod={this.decrement}/>
+                <CounterButton by={10} incrementMethod={this.increment} decrementMethod={this.decrement}/>
+                <span className="count">{this.state.counter}</span>
+                <div><button className="reset" onClick={this.clear}>Reset</button></div>
+
+            </div>
         </div>
     )
     }
